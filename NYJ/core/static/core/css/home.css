@@ -1,0 +1,21 @@
+h1{
+    color: rgb(101, 16, 181);
+}
+
+.container-fluid{
+
+    display: flex;
+    justify-content: center;
+    border: 3px solid red;
+}
+
+footer{
+    height: 18vh;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: space-around;
+}
+
+h3{
+    color: aliceblue;
+}
