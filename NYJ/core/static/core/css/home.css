@@ -1,12 +1,77 @@
+body{
+    background-color: #f0f0f0;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    width: 100vw;
+    background-color: #11ffee00;
+}
+
+.logoicono{
+    height: 4em;
+}
+
+p{
+    font-size: 25px;
+    border-radius: 30px;
+
+}
+
+
 h1{
     color: rgb(101, 16, 181);
 }
 
-.container-fluid{
+h2{
+    font-size: 80px;
+    color: aliceblue;
+}
+
+h3{
+    color: aliceblue;
+}
+h4{
+    color: rgb(28, 27, 27);
+    font-size: 30px;
+}
+
+.containerportada{
 
     display: flex;
     justify-content: center;
+    height: 80vh;
+    padding: 10px;
+}
+
+.precios{
     border: 3px solid red;
+    height: 80vh;
+}
+
+.pys{
+    width: 54vw;
+    height: 0px;
+    border-right: 70px solid transparent;
+    border-top: 100px solid #428bca;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.imgservi{
+    height: 70vh;
+    border: 2px solid red;
+    display: flex;
+}
+
+.carpimg{
+    height: 45vh;
+    width: 30vw;
+    border-radius: 50px;
+    margin: 10px;
 }
 
 footer{
@@ -16,6 +81,6 @@ footer{
     justify-content: space-around;
 }
 
-h3{
+i{
     color: aliceblue;
 }
