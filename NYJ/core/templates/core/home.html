@@ -51,9 +51,9 @@
       </div>
   </nav>
 <!--FIN NAVBAR-->
-
+    <div class="septop"></div>
     <div class="container container-fluid containerportada">
-        <img src="{% static 'core/img/inicio.png' %}" alt="">
+        <img class="imginicio" src="{% static 'core/img/inicio.png' %}" alt="">
     </div>
 
     <div class="container container-fluid precios">
@@ -61,12 +61,23 @@
             <h2>Servicios</h2>
         </div>
         
-        <div class="imgservi" >
-            <img id="imgcarp" class="carpimg" data-aos="fade-up"  src="{% static 'core/img/carpinteria.jpg' %}" alt="">
+        <div class="servi" >
+            <img id="imgcarp" class="carpimg" data-aos="zoom-in" src="{% static 'core/img/carpinteria.jpg' %}" alt="">
             
-            <div class="container">
+            <div class="container dato">
                <h4  data-aos="fade-left">{{carpinteria}}</h4> 
-               <small data-aos="fade-up-left">{{description}}</small>
+               <h5 class="desc_serv" data-aos="zoom-in">{{description}}</h5>
+               <button class="btn btn-primary" data-aos="zoom-in">Ver precios $</button>
+            </div>
+        </div>
+
+        <div class="servi" >
+            <img id="imgcarp" class="carpimg" data-aos="zoom-in-right"  src="{% static 'core/img/carpinteria.jpg' %}" alt="">
+            
+            <div class="container dato">
+               <h4  data-aos="fade-left">{{carpinteria}}</h4> 
+               <h5 class="desc_serv" data-aos="zoom-in">{{description}}</h5>
+               <button class="btn btn-primary" data-aos="zoom-in">Ver precios $</button>
             </div>
         </div>
 
