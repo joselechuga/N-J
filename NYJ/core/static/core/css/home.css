@@ -2,11 +2,8 @@ body{
     background-color: #f0f0f0;
 }
 
-.navbar{
-    position:fixed;
-    top:0;
-    width: 100vw;
-    background-color: #11ffee00;
+.menu{
+    background-color: #2347ea;
 }
 
 .logoicono{
@@ -16,12 +13,15 @@ body{
 p{
     font-size: 25px;
     border-radius: 30px;
-
 }
 
+small{
+    font-size: 20px;
+}
 
 h1{
-    color: rgb(101, 16, 181);
+    color: rgb(35, 35, 35);
+    font-size: 80px;
 }
 
 h2{
@@ -40,16 +40,33 @@ h4{
 .containerportada{
     display: flex;
     justify-content: center;
-    height: 80vh;
+    height: 90vh;
     padding: 10px;
 }
 
-.precios{
-    border: 3px solid red;
+.infoportada{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.cuadroimgportada{
+    height: 100%;
+    width: 100%;
+}
+
+.imgportada{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
 }
 
 .pys{
-    width: 60vw;
+    width: 60%;
     height: 0px;
     border-right: 70px solid transparent;
     border-top: 100px solid #428bca;
@@ -62,22 +79,19 @@ h4{
 .servi{
     height: 50vh;
     display: flex;
-    margin: 10px;
+    margin:5px;
     padding: 5px;
 }
 
 .carpimg{
-    height: 45vh;
-    width: 35vw;
+    height: 95%;
+    width: 45%;
     border-radius: 50px;
-    margin: 10px;
-    position: relative;
 }
 
 .dato{
-    height: 30vh;
-    width: 30vw;
-    box-shadow: 5px 5px #696969;
+    height: 50%;
+    width: 35%;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -103,6 +117,10 @@ i{
     .navbar{
         background-color: rgb(30, 108, 242);
         width: 100vw;
+    }
+
+    p{
+        color: #f0f0f0;
     }
 
     .septop{
@@ -144,3 +162,13 @@ i{
         width: 50vw;
     }
 }
+
+
+/*
+.navbar{
+    position:fixed;
+    top:0;
+    width: 100%;
+    background-color: #11ffee00;
+}
+*/

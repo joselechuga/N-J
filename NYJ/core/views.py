@@ -6,7 +6,7 @@ def home(request):
     carpinteria_desc = {
         'carpinteria':"Servicio de carpinteria",
         'description':"""Armado de closet, 
-                        muebles de cocina, velador, comoda, escritorio, comdedor, Pack TV"""
+                        muebles de cocina, velador, comoda, escritorio, comdedor, Pack TV."""
     }
 
 

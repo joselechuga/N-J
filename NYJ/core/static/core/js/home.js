@@ -1,6 +1,8 @@
 
 /* FUNCION PARA CAMBIAR DE COLOR LA BARRA DE NAVEGACION AL REALIZAR SCROLL - HOVER*/
-$(document).ready(function () {
+/**
+ * 
+ * $(document).ready(function () {
 
     var nav = document.getElementById('navbar');
 
@@ -22,6 +24,12 @@ $(document).ready(function () {
         $(this).css({ color: "#141515" });
         
     });
+
+});
+
+ */
+
+
 /*
     hover para imagenes 
     $('.portada').hover(function(){
@@ -32,6 +40,3 @@ $(document).ready(function () {
         $(this).css({ filter: 'grayscale(100%)'});
     });
    */ 
-
-});
-
