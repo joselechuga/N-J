@@ -3,12 +3,53 @@ body{
 }
 
 .menu{
-    background-color: #2347ea;
+    position: fixed;
+    background-color: #5555d600;
+    width: 100%;
+    display: flex;
+}
+.logo{
+    width: 10%;
 }
 
 .logoicono{
     height: 4em;
 }
+
+.direcciones{
+    width: 100%;
+    display: flex;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+a{
+    text-decoration:none;
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;
+    -webkit-text-stroke: 0.5px black;
+    color: #010101;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-weight: 600;
+}
+a::before {
+    margin-left: auto;
+}
+
+a::after, a::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f1eeee;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  a:hover::after, a:hover::before {
+    width: 100%;
+  }
 
 p{
     font-size: 25px;
@@ -35,6 +76,10 @@ h3{
 h4{
     color: rgb(28, 27, 27);
     font-size: 30px;
+}
+
+.septop{
+    height:8vh;
 }
 
 .containerportada{

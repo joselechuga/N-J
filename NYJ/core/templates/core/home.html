@@ -15,15 +15,23 @@
   </head>
 
   <body>
-    <div class="menu">
+    <div id="navbar" class="menu">
         <div class="logo"> 
             <img class="logoicono" src="{% static 'core/img/LOGO.png' %}" alt="logo_de_la_pagina">
+        </div>
+
+        <div class="direcciones">
+            <a href="#">Inicio </a>
+            <a href="#">Servicios </a>
+            <a href="#">Contactanos </a>
+            <a href="#">¿ Quienes somos ?</a>
         </div>
     </div>
 
 <!--FIN NAVBAR-->
-
+<div class="septop"></div>
     <div class=" container-fluid containerportada">
+        
         <div class="infoportada">
             <p>Expertos en limpieza</p>
             <h1>N&J Lavado Express</h1>
@@ -40,12 +48,12 @@
         </div>
         
         <div class="servi" >
-            <img id="imgcarp" class="carpimg" data-aos="zoom-in" src="{% static 'core/img/carpinteria.jpg' %}" alt="">
+            <img id="imgcarp" class="carpimg" src="{% static 'core/img/carpinteria.jpg' %}" alt="">
             
-            <div class="container dato">
-               <h4  data-aos="fade-left">{{carpinteria}}</h4> 
-               <h5 class="desc_serv" data-aos="zoom-in">{{description}}</h5>
-               <button class="btn btn-primary" data-aos="zoom-in">Ver precios $</button>
+            <div class="container dato ">
+               <h4  >{{carpinteria}}</h4> 
+               <h5 class="desc_serv " >{{description}}</h5>
+               <button class="btn btn-primary" >Ver precios $</button>
             </div>
         </div>
 
@@ -61,18 +69,6 @@
 
     </div>
 
-
-
-    <div class="container">
-        <div class="card" style="width: 18rem;">
-            <img  class="carpimg" src="{% static 'core/img/carpinteria.jpg' %}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-    </div>
 
 <!--Seccion footer-->
     <footer>
