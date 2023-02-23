@@ -14,6 +14,7 @@ def home(request):
 
     return render(request,'core/home.html',dato)
 
+
 def carpinteria(request):
     return render(request,'core/carpinteria.html')
 

@@ -23,7 +23,7 @@ body{
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
-a{
+.enlace{
     text-decoration:none;
     font-size: 25px;
     font-family: 'Kanit', sans-serif;
@@ -36,17 +36,17 @@ a{
     border-radius: 25px;
 }
 
-a:hover{
+.enlace:hover{
     background-color: #0f6ec1;
     color: #f1eeee;
 }
 
 
-a::before {
+.enlace::before {
     margin-left: auto;
 }
 
-a::after, a::before {
+.enlace::after, .enlace::before {
     content: '';
     width: 0%;
     height: 2px;
@@ -55,7 +55,7 @@ a::after, a::before {
     transition: 0.5s;
   }
   
-  a:hover::after, a:hover::before {
+  .enlace:hover::after, .enlace:hover::before {
     width: 100%;
   }
 
