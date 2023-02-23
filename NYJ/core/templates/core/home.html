@@ -1,106 +1,116 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     {% load static %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="stylesheet" href="{% static 'core/css/home.css' %}">
 
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="navbar" class="menu">
-        <div class="logo"> 
+        <div class="logo">
             <img class="logoicono" src="{% static 'core/img/LOGO.png' %}" alt="logo_de_la_pagina">
         </div>
 
         <div class="direcciones">
             <a href="#">Inicio </a>
-            <a href="#">Servicios </a>
+            <a href="#servicios">Servicios </a>
             <a href="#">Contactanos </a>
             <a href="#">¿ Quienes somos ?</a>
         </div>
     </div>
 
-<!--FIN NAVBAR-->
-<div class="septop"></div>
+    <!--FIN NAVBAR-->
+    <div class="septop"></div>
     <div class=" container-fluid containerportada">
-        
+
         <div class="infoportada">
             <p>Expertos en limpieza</p>
             <h1>N&J Lavado Express</h1>
-            <small>Consulta nuestros precios y servicios ,escoge el que mas necesitas y ponte en contacto con nosotros.</small>
+            <small>Consulta nuestros precios y servicios ,escoge el que mas necesitas y ponte en contacto con
+                nosotros.</small>
         </div>
         <div class="cuadroimgportada">
             <img class="imgportada" src="{% static 'core/img/Limpieza.jpg' %}" alt="">
         </div>
     </div>
 
-    <div class=" container-fluid precios">
-        <div class="pys">
-            <h2>Servicios</h2>
-        </div>
-        
-        <div class="servi" >
-            <img id="imgcarp" class="carpimg" src="{% static 'core/img/carpinteria.jpg' %}" alt="">
-            
-            <div class="container dato ">
-               <h4  >{{carpinteria}}</h4> 
-               <h5 class="desc_serv " >{{description}}</h5>
-               <button class="btn btn-primary" >Ver precios $</button>
+    <div id="servicios" class="pys">
+        <h2>Servicios</h2>
+    </div>
+
+    <div class="cel">
+        <div class="container-fluid servicios">
+
+        {% for i in servicios %}
+            <div class="servi">
+                <div class="serviimg">
+                    <img id="imgcarp" class="img-fluid imgservi" src="{{i.imagen}}" alt="">
+                </div>
+
+                <div class="container dato ">
+                    <h4>{{i.servicio}}</h4>
+                    <h5 class="desc_serv ">{{i.descripcion}}</h5>
+
+                </div>
             </div>
+        {% endfor %}
+
         </div>
 
-        <div class="servi" >
-            <img id="imgcarp" class="carpimg" data-aos="zoom-in-right"  src="{% static 'core/img/carpinteria.jpg' %}" alt="">
-            
-            <div class="container dato">
-               <h4  data-aos="fade-left">{{carpinteria}}</h4> 
-               <h5 class="desc_serv" data-aos="zoom-in">{{description}}</h5>
-               <button class="btn btn-primary" data-aos="zoom-in">Ver precios $</button>
-            </div>
-        </div>
+        <div class="botones">
+            <a href="{% url 'carpinteria' %}"><button class="btn btn_pagina">Ver ofertas</button></a>
+            <button class="btn btn_pagina">Ver ofertas</button>
+            <button class="btn btn_pagina">Ver ofertas</button>
 
+        </div>
     </div>
 
 
-<!--Seccion footer-->
+    <!--Seccion footer-->
     <footer>
-       <div class="info">
+        <div class="info">
             <h3>Mas información</h3>
 
+        </div>
 
-       </div>
-
-       <div class="contacto">
+        <div class="contacto">
             <h3>Contactanos</h3>
             <div class="enlaces">
-                <a href="#">
+                <a class="a" href="#">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
-       </div>
+        </div>
     </footer>
     <!-- Optional JavaScript; choose one of the two! -->
-  
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/44774d462e.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="{% static 'core/js/home.js' %}"></script>
-    <script>
-        AOS.init();
-      </script>
-  </body>
+
+</body>
+
 </html>
 
 <!-- 
@@ -139,4 +149,56 @@
           </div>
       </div>
   </nav>
+-->
+
+<!-- 
+                <div class="servi">
+                <div class="serviimg">
+                    <img id="imglimpieza" class="img-fluid imgservi" data-aos="zoom-in"
+                        src="{% static 'core/img/carpinteria.jpg' %}" alt="">
+                </div>
+    
+                <div class="container dato ">
+                    <h4>{{servicio}}</h4>
+                    <h5 class="desc_serv ">{{description}}</h5>
+
+                </div>
+            </div>
+            <div class="servi">
+                <div class="serviimg">
+                    <img id="imglav" class="img-fluid imgservi" data-aos="zoom-in"
+                        src="{% static 'core/img/carpinteria.jpg' %}" alt="">
+                </div>
+    
+                <div class="container dato ">
+                    <h4>{{servicio}}</h4>
+                    <h5 class="desc_serv ">{{description}}</h5>
+
+                </div>
+            </div>
+
+
+
+
+
+                carpinteria_desc = [{
+        'id':1,
+        'servicio':"Servicio de Carpinteria",
+        'description':"""Armado de closet, 
+                        muebles de cocina, velador, comoda, escritorio, comdedor, Pack TV.""",
+        'imagen':'https://c4.wallpaperflare.com/wallpaper/359/815/642/herramientas-trabajo-utensilios-wallpaper-preview.jpg'
+    },
+    {   
+        'id':2,
+        'servicio':"Servicio de Lavanderia",
+        'description':"""Tu ropa y en las mejores manos en la mejor lavanderia de ropa hogar y ropa de cama.""",
+        'imagen':'https://c1.wallpaperflare.com/preview/85/364/858/t-shirt-tee-clothing-garment.jpg'
+    },    {   
+        'id':3,
+        'servicio':"Servicio de LavadoExpress",
+        'description':"""Lavado de alfombras, interiores y colchones. """,
+        'imagen':'https://c1.wallpaperflare.com/preview/249/621/144/vacuum-cleaner-carpet-cleaner-housework-housekeeping.jpg'
+    
+    }]
+    
 -->

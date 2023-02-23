@@ -1,13 +1,24 @@
+import requests
 from django.shortcuts import render
 
-# Create your views here.
-
 def home(request):
-    carpinteria_desc = {
-        'carpinteria':"Servicio de carpinteria",
-        'description':"""Armado de closet, 
-                        muebles de cocina, velador, comoda, escritorio, comdedor, Pack TV."""
+
+    url = "https://638cc70fd2fc4a058a5fbbdc.mockapi.io/s"
+
+    servicios = requests.request("GET", url)
+    servicios = servicios.json()
+
+    dato = {
+        'servicios': servicios
     }
 
+    return render(request,'core/home.html',dato)
 
-    return render(request,'core/home.html',carpinteria_desc)
+def carpinteria(request):
+    return render(request,'core/carpinteria.html')
+
+
+
+
+
+
